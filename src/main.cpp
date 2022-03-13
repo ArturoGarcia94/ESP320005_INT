@@ -11,11 +11,12 @@ void setup() {
   pinMode(led, OUTPUT);
   pinMode(boton, INPUT_PULLUP);
 
-  attachInterrupt(digitalPinToInterrupt(boton), funcioninterrupcion, FALLING);
+  attachInterrupt(digitalPinToInterrupt(boton), funcioninterrupcion, CHANGE);
 }
 
 void loop() {
  Serial.println("Este es un loop");
+ delay(500);
 
 }
 
